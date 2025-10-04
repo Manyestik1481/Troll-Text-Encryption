@@ -56,7 +56,7 @@ class TrollTextEncryption:
     def _get_random_word(self, category, char_code):
         # ... (bu metot aynı kalacak) ...
         words = self.troll_words[category]
-        index = (char_code + random.randint(0, 100)) % len(words)
+        index = (char_code + random.randint(0, 1000)) % len(words)
         return words[index]
 
     def encrypt_password_to_troll(self, password: str) -> str:
@@ -85,4 +85,5 @@ class TrollTextEncryption:
         return final_troll_phrase
 
     def decrypt_troll_to_password(self, troll_phrase: str) -> Optional[str]:
+
         return None
