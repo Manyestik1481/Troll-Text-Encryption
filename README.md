@@ -1,5 +1,6 @@
 # Troll-Text-Encryption
-Yeni, Eğlencesine yapılmış güçlü bir şifreleme algoritması
+Yeni, Eğlencesine yapılmış güçlü bir şifreleme algoritması. orjinal sahibi Manyestik1481 dir ve 
+bunun dışındaki kopyaları kullanmayınız. orjinal kodalr türkçedir
 
 başlamadan önce typing ve random kütüphanelerine sahip olduğundan emin ol
 
