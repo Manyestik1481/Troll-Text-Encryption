@@ -50,17 +50,14 @@ class TrollTextEncryption:
                 "tüh be", "lanet olsun", "allah belanı vermesin"
             ]
         }
-        random.seed(None) # Önemli: Global random state'i sıfırlıyoruz.
+        random.seed(None)
 
-    # encrypt_password_to_troll ve decrypt_troll_to_password metotları aynı kalacak
     def _get_random_word(self, category, char_code):
-        # ... (bu metot aynı kalacak) ...
         words = self.troll_words[category]
         index = (char_code + random.randint(0, 1000)) % len(words)
         return words[index]
 
     def encrypt_password_to_troll(self, password: str) -> str:
-        # ... (bu metot aynı kalacak) ...
         troll_phrase_parts = []
         random.seed(password + self.seed_phrase)
 
@@ -75,15 +72,14 @@ class TrollTextEncryption:
             filler = self._get_random_word("filler", char_code + i * 3)
             exclamation = self._get_random_word("exclamation", char_code * 6 + i)
 
-            # Bu formatı daha da simsiyah hale getirmek için değiştiriyoruz
-            # Daha rastgele, daha "kopuk" bir cümle yapısı
             troll_part = f"{subject} {adverb} {verb} {preposition} {adjective} {object_word} {filler}, {exclamation}!"
             troll_phrase_parts.append(troll_part)
 
-        final_troll_phrase = " | SIKTIMIN DELİSİ! | ".join(troll_phrase_parts) # Ayırıcıyı da değiştirdik
+        final_troll_phrase = " | SIKTIMIN DELİSİ! | ".join(troll_phrase_parts) 
         random.seed(None) # Rastgeleliği sıfırla
         return final_troll_phrase
 
     def decrypt_troll_to_password(self, troll_phrase: str) -> Optional[str]:
-
+        #hadi kolay gelsin
         return None
+
