@@ -8,7 +8,7 @@ class DynamicKaosTrollTextEncryption:
     def __init__(self):
         # Seed phrase artık bir başlangıç noktası olarak, ama asıl anahtar değil.
         # Bu, ilk HMAC'yi beslemek için kullanılır (düşük entropili ama sabit).
-        self.initial_seed_phrase = "misi_bot_troll_key_baslangic" 
+        self.initial_seed_phrase = "troll_key_baslangic" 
 
         self.troll_words = {
 
@@ -172,3 +172,4 @@ class DynamicKaosTrollTextEncryption:
     def decrypt_troll_to_password(self, troll_phrase: str) -> Optional[str]:
         # Kırılamazlık devam ediyor.
         return None
+
